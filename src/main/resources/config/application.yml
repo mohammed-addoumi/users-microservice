@@ -1,16 +1,5 @@
-server:
-  port: 8081
-
 spring:
   application:
     name: users
-  datasource:
-    url: jdbc:h2:mem:testdb
-    username: sa
-    password:
-  h2:
-    console:
-      enabled: true
-
-  jpa:
-    show-sql: true
+  config:
+    import: optional:configserver:http://localhost:8888

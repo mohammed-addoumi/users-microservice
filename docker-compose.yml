@@ -1,0 +1,13 @@
+version: "3.0"
+services:
+  users:
+    container_name: users
+    image: commerce-platform/users
+    ports:
+      - 8081:8081
+    networks:
+      - commerce-platform-network
+
+networks:
+  commerce-platform-network:
+    driver: bridge
