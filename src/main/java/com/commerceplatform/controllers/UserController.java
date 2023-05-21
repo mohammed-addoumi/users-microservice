@@ -1,6 +1,6 @@
 package com.commerceplatform.controllers;
 
-import com.commerceplatform.dto.UserDto;
+import com.commerceplatform.model.User;
 import com.commerceplatform.services.UserService;
 import java.util.List;
 import lombok.RequiredArgsConstructor;
@@ -18,7 +18,7 @@ public class UserController {
   private final UserService userService;
 
   @GetMapping
-  public List<UserDto> getAllUsers() {
+  public List<User> getAllUsers() {
     log.info("{} :  fetching all users ", getClass().getSimpleName());
     return userService.getAllUsers();
   }
